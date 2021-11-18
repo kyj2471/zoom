@@ -11,6 +11,13 @@ html(lang="en")
       h1 hi boom
 
     main  
-      h2 bombcoding
-      script(src = "/public/js/app.js")
-      button(color = "red") 규빈
+        form#nick
+          input(type = "text", placeholder="choose nickname", required)
+          button 이름등록
+        
+        ul
+        form#message
+          input(type = "text", placeholder="hey", required)
+          button send
+    script(src = "/public/js/app.js")
+
