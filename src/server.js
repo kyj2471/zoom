@@ -11,7 +11,6 @@ app.get("/", (req, res) => res.render("home"));
 app.get("/*", (req, res) => res.redirect("/"));
 
 const handleListen = () => console.log(`listening on 3000`);
-
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 

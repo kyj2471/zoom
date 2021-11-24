@@ -26,9 +26,6 @@ function handleSubmit(event) {
   event.preventDefault();
   const input = msgForm.querySelector("input");
   socket.send(makeMessage("new_msg", input.value));
-  // const li = document.createElement("li");
-  // li.innerText = `YOU : ${input.value}`;
-  // msgList.append(li);
   input.value = "";
 }
 
@@ -36,10 +33,6 @@ function handleNickSubmit(event) {
   event.preventDefault();
   const input = nickForm.querySelector("input");
   socket.send(makeMessage("nickname", input.value));
-  // socket.send({
-  //   type: "nickname",
-  //   payload: input.value,
-  // });
 }
 msgForm.addEventListener("submit", handleSubmit);
 nickForm.addEventListener("submit", handleNickSubmit);
